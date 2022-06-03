@@ -14,7 +14,6 @@ const updateSlider = (value) => {
 
 slidernum(value);
 
-
 }
 
 function slider(){
@@ -23,68 +22,90 @@ function slider(){
     updateSlider(e.target.value)
   
   updateSlider(0);
-
+   
 }
 slider();
 
 
   function slidernum(value){
-    
-    let price = 8;
+    // let price = 0;
+if( (value >= 0) & (value <= 20) ){
+rangevalue.textContent = ` 10k `
+pricing.textContent = `${price = 8}.`
 
-if((value >= 0) & (value <= 20)){
-  rangevalue.textContent = ` 10k `
-pricing.textContent = `${price = 8 }.`
+if (checkbox.checked) {
+  const totalValue =  (price*25)/100; 
+pricing.textContent = `${totalValue}.`
+
+}
 
 
 }else if ( value > 20 && value <= 40){
   rangevalue.textContent = ` 50k `
   pricing.textContent = `${price = 12 }.`
+  // discount (price)
+  if (checkbox.checked) {
+    const totalValue =  (price*25)/100; 
+  pricing.textContent = `${totalValue}.`
   
-
+  }
 
 }else if ( value > 40 && value <= 60){
   rangevalue.textContent = ` 100k `
   pricing.textContent = `${price = 16 }.`
+  // discount (price)
+  if (checkbox.checked) {
+    const totalValue =  (price*25)/100; 
+  pricing.textContent = `${totalValue}.`
   
+  }
 
-
-}else if ( value > 60 && value <= 80){
+}else if ( value > 60 && value <= 80 ){
   rangevalue.textContent = ` 500k `
-  pricing.textContent = `${price = 24 }.`
+  pricing.textContent = `${price = 24  }.`
+  // discount (price)
+  if (checkbox.checked) {
+    const totalValue =  (price*25)/100; 
+  pricing.textContent = `${totalValue}.`
   
-
+  }
 
 }else if (  value <= 100){
   rangevalue.textContent = ` 1M `
   pricing.textContent = `${price = 36 }.`
- 
+  // discount (price)
+  if (checkbox.checked) {
+    const totalValue =  (price*25)/100; 
+  pricing.textContent = `${totalValue}.`
+  
+  }
 }
 
+// console.log(value)
 
 discount (price)
 
 
 
-
   }
 
 
-  function discount (price){
+  function discount( price){
+
+  
     checkbox.addEventListener('change', function () {
-      if (checkbox.checked) {
-        const totalValue =  price * 25 / 100;
+      if (checkbox.checked ){   
+        const totalValue =  (price*25)/100; 
         pricing.textContent = `${totalValue}.`
-       
       } 
-      
       else {
         pricing.textContent = `${price}.`
+    
       }
     
     });
+
  
   }
 
-
-  
+ 
