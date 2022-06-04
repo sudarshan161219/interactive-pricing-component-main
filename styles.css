@@ -49,7 +49,7 @@ body {
 .card{
 	margin-top: 2rem;
 	width: 100%;
-	max-width: 335px;
+	/* max-width: 335px; */
 	padding: 2rem 0 2rem 0;
 	text-align: center;
 	background-color: var(--color-WhitePricingComponentBackground);
@@ -93,7 +93,7 @@ body {
     
 }
 
-.pricing-heading{
+.pricing-heading, .desktop-pricing-heading{
 	font-size: 2.1rem;
 	color: var(--color-DarkDesaturatedBlueTextCTABackground);
 	font-weight: 800;
@@ -105,7 +105,7 @@ body {
     align-items: center;
 }
 
-.Pageviews, .Pageviews-month, .billing{
+.Pageviews, .Pageviews-month, .billing , .desktop-Pageviews, .desktop-Pageviews-month, .desktop-billing{
 	font-weight: 800;
 	font-size: 15px;
 	color: var(--color-GrayishBlueText);
@@ -114,7 +114,7 @@ body {
 	text-transform: uppercase;
 }
 
-.Pageviews-month , .billing{
+.Pageviews-month , .billing, .desktop-Pageviews-month , .desktop-billing{
 	text-transform:none;
 	font-weight: 600;
 	letter-spacing: 1px;
@@ -175,14 +175,23 @@ body {
 	box-shadow: var(--color-shadow);
   }
 
+  .thumb :hover{
+	  cursor: pointer;
+  }
+
   .switch{
 	position: relative;
-	  display: inline-block;
+	  /* display: inline-; */
 	  width: 38px;
 	  height: 22px;
 	  background-color:var(--color-LightGrayishBlueToggleBackground);
 	  border-radius: 34px;
   }
+
+  .switch:hover{
+	  cursor: pointer;
+  }
+
 
   .switch input{
 	  opacity: 0;
@@ -214,8 +223,9 @@ body {
 
 
 
-  input:checked + .slider {
-	background-color: #2196F3;
+  input:checked + .switch{
+	background-color:var(--color-SoftCyanFullSliderBar);
+	
   }
   
   input:focus + .slider {
@@ -240,7 +250,7 @@ body {
 
   .discount{
 	  background-color: var(--color-LightGrayishRedDiscountBackground);
-	  width: 35px;
+	  width: 37px;
 	  height: 17px;
 	  font-size: 13px;
 	  border-radius: 35px;
@@ -285,4 +295,94 @@ color: var(--color-PaleBlueCTAText);
 justify-content: center;
 align-items: center;
 border-radius: 30px;
+  }
+
+  .button:hover{
+	  cursor: pointer;
+  }
+
+.desktop-pricing-container, .desktop-discount{
+	display:none;
+}
+
+   @media (min-width:768px) {
+
+	body{
+		background-size: auto 436px;
+	}
+
+	.Pageviews,.pricing-flex, .rangeValue, .pricing, .discount{
+		display: none;
+	} 
+
+	.desktop-pricing-container{
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+.heading{
+font-size:2rem;
+}
+
+.paragraph-container {
+    display: flex;
+	justify-content: center;
+}
+
+.text-container {
+
+	background-position: 204px 50px;
+    background-size: auto 151px;
+}
+
+	.card{
+		width: 100%;
+		width: 545px;
+        padding: 2rem 3rem;
+	}
+
+.desktop-pricing-flex{
+	display: flex;
+    align-items: center;
+}
+.toggle-container {
+    margin-top: 1rem;
+}
+
+	.desktop-discount{
+		background-color: var(--color-LightGrayishRedDiscountBackground);
+		width: 95px;
+		height: 25px;
+		font-size: 13px;
+		border-radius: 35px;
+		 color: var(--color-LightRedDiscountText);
+		 display: flex;
+		 justify-content: center;
+		 align-items: center;
+	}
+
+
+	.desktop-bottom{
+		display: flex;
+	}
+
+
+	.bottom {
+		margin-bottom: 0;
+	}
+
+
+	.bottom-flex {
+		justify-content: left;
+		align-items: baseline;
+	}
+
+
+	.desktop-bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
   }
