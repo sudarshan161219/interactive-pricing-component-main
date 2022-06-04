@@ -37,7 +37,7 @@
        <div class="desktop-pricing-container">
         <p class="desktop-Pageviews"> <span class="desktop-rangeValue"></span> Pageviews</p>
         <div class="desktop-pricing-flex">
-          <h3 class="desktop-pricing-heading">$<span class="desktop-pricing"></span>00</h3>
+          <h2 class="desktop-pricing-heading">$<span class="desktop-pricing"></span>00</h2>
           <p class="desktop-Pageviews-month">/month</p>
         </div>
        </div>
@@ -45,7 +45,7 @@
      <p class="Pageviews"> <span class="rangeValue"></span> Pageviews</p>
 
       <div class="wrap">
-        <input id="myRange" class="range" type="range"  oninput="rangeValue.innerText = this.value">
+        <label for="range"></label><input id="myRange" class="range" type="range"  oninput="rangeValue.innerText = this.value">
         <div class="track">
           <div  class="track-inner"></div>
         </div>
@@ -59,6 +59,7 @@
     <div class="toggle-container">
       <p class="billing"> Monthly Billing</p>
       <label class="switch">
+        <label for="checkbox"></label>
         <input class="checkbox"  type="checkbox">
         <span class="slider round"></span>
       </label>
